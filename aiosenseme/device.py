@@ -683,13 +683,16 @@ class SensemeDevice:
         if not self._is_running:
             self.start()
         try:
-            await asyncio.wait(
-                [self._first_update.wait(), self._is_connected.wait()],
+            await asyncio.wait_for(
+                asyncio.gather(
+                    self._first_update.wait(),
+                    self._is_connected.wait(),
+                ),
                 timeout=timeout_seconds,
             )
+            return True
         except asyncio.TimeoutError:
             return False
-        return True
 
     def _execute_callbacks(self) -> None:
         """Run all callbacks to indicate something has changed."""

@@ -1,6 +1,6 @@
 # Big Ass Fans new protocol 
 
-This library is no longer maintained as Big Ass Fans has changed the protocol in newer firmware. The new protocol has a library here: https://github.com/jfroy/aiobafi6
+This library is in maintenance mode as Big Ass Fans has changed the protocol in newer firmware. The new protocol has a library here: https://github.com/jfroy/aiobafi6. There may come a point where this library cannot function any longer and users are encouraged to make the transition where feasible.
 
 # aiosenseme library
 
