@@ -751,9 +751,9 @@ class SensemeDevice:
             key = ";".join(values[:-valuecount])
             value = ";".join(values[-valuecount:])
             if key == "ERROR":
-                _LOGGER.error(
+                _LOGGER.debug(
                     "%s: Command error response",
-                    self.name,
+                    self.name
                 )
                 continue
             if key == "TIME;VALUE":
